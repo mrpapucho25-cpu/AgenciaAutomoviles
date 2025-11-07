@@ -13,7 +13,7 @@
   <header class="navbar">
     <div class="logo-section">
       <div class="logo-placeholder">
-        <img src="LOGO.png" alt="Logo" class="agency-logo" />
+        <img src="{{ asset('images/LOGO.png') }}" alt="Logo" class="agency-logo" />
       </div>
       <h1>Agencia de Automóviles "Chino"</h1>
     </div>
