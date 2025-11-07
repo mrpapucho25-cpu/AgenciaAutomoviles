@@ -1,0 +1,107 @@
+/* style3.css */
+
+.vehicle-details-section {
+    padding: 30px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.detail-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.detail-image {
+    width: 300px; 
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0; 
+}
+
+.detail-content {
+    flex-grow: 1;
+}
+
+.detail-content h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en escritorio/tablet */
+    gap: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.spec-item {
+    background-color: #e9ecef;
+    padding: 8px 10px;
+    border-radius: 4px;
+    line-height: 1.4;
+}
+
+.spec-item strong {
+    font-size: 15px;
+    color: #000;
+}
+
+/* ------------------------------------------------------------------- */
+/* MEDIA QUERIES (TABLET Y MÓVIL) */
+/* ------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Las tarjetas de detalle se apilan verticalmente (para tablet y móvil) */
+    .detail-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .detail-image {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+
+    .detail-content {
+        width: 100%;
+        /* Asegura que el texto y las especificaciones se centren en el móvil */
+        text-align: left; /* Mantiene la alineación del texto normal */
+    }
+    
+    .detail-content h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En móvil (celular), las especificaciones van a una columna */
+    .specs-grid {
+        grid-template-columns: 1fr; 
+    }
+}
